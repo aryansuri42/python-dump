@@ -1,2 +1,2 @@
 # python-dump
-Sme notes/codes just there to help me sometimes
+Some notes/codes just there to help me sometimes
