@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>The Bill Form</h2>
+<p>Fill in the form and click the button</p>
+<form action = "/results" method = "post">
+    {{billform.amount.label}} {{billform.amount}}
+    <br>
+    {{billform.period.label}} {{billform.period}}
+    <hr>
+    {{billform.flatmate1.label}}
+    <br>
+    {{billform.name1.label}} {{billform.name1}}
+    <br>
+    {{billform.days1.label}} {{billform.days1}}
+    <hr>
+    {{billform.flatmate2.label}}
+    <br>
+    {{billform.name2.label}} {{billform.name2}}
+    <br>
+    {{billform.days2.label}} {{billform.days2}}
+    <br>
+    {{billform.button}}
+</form>
+</body>
+</html>

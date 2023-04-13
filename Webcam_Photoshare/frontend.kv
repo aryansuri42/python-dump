@@ -1,0 +1,63 @@
+<WebcamScreen>:
+    GridLayout:
+        padding: 15
+        spacing: 15
+        cols: 1
+        Camera:
+            id: cam
+            resolution: (420, 690)
+            size_hint_y: 0.8
+            play: False
+        Button:
+            size_hint_y: 0.1
+            id: cam_button
+            text: 'Start Camera'
+            on_press: root.start() if root.ids.cam.play == False else root.stop()
+            background_normal: 'images/hb.png'
+            background_down: 'images/hh.png'
+        Button:
+            size_hint_y: 0.1
+            text: 'Capture'
+            on_press: root.capture()
+            background_normal: 'images/hb.png'
+            background_down: 'images/hh.png'
+
+<ImageScreen>:
+    GridLayout:
+        padding: 15
+        spacing: 15
+        cols: 1
+        Image:
+            id: img
+            size_hint_y: 0.7
+        Button:
+            text: 'Create Sharable Image'
+            on_press: root.create_link()
+            size_hint_y: 0.1
+            background_normal: 'images/hb.png'
+            background_down: 'images/hh.png'
+        Label:
+            id: link
+            text: " "
+            size_hint_y: 0.1
+        GridLayout:
+            cols: 2
+            size_hint_y: 0.1
+            Button:
+                text: 'Copy Link'
+                on_press: root.copy_link()
+                background_normal: 'images/hb.png'
+                background_down: 'images/hh.png'
+            Button:
+                text: 'Open Link'
+                on_press: root.open_link()
+                background_normal: 'images/hb.png'
+                background_down: 'images/hh.png'
+
+<RootWidget>:
+    WebcamScreen:
+        id: webcam_screen
+        name: 'webcam_screen'
+    ImageScreen:
+        id: image_screen
+        name: 'image_screen'
